@@ -1,0 +1,20 @@
+{
+  "sites": [
+    {
+      "name": "Kirkwood Ice Arena",
+      "url": "https://www.kirkwoodparksandrec.org/places-to-go/facilities/ice-arena"
+    },
+    {
+      "name": "Creve Coeur Ice Arena",
+      "url": "https://www.crevecoeurmo.gov/562/Public-Ice-Sessions"
+    },
+    {
+      "name": "Brentwood Ice Rink",
+      "url": "https://www.brentwoodmo.org/2358/Skating-Sessions"
+    },
+    {
+      "name": "Centene Community Ice Center",
+      "url": "https://www.centenecommunityicecenter.com/ice-skating/public-skating-1"
+    }
+  ]
+}
