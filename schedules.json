@@ -1,26 +1,26 @@
 {
-  "timestamp": "2025-08-02T10:48:23.969664",
-  "total_schedules": 6,
+  "timestamp": "2025-08-25T14:54:24.612615",
+  "total_schedules": 8,
   "schedules": [
     {
-      "schedule_link": "https://www.kirkwoodparksandrec.org/home/showpublisheddocument/16390/638897281660275522",
+      "schedule_link": "https://www.kirkwoodparksandrec.org/home/showpublisheddocument/16390/638897281660270000",
       "parent_page_link": "https://www.kirkwoodparksandrec.org/places-to-go/facilities/ice-arena",
       "ice_rink_name": "Kirkwood Ice Arena",
       "year": 2025,
       "month": "August",
       "schedule_type": "Public Skating, Stick & Puck, Freestyle Sessions",
       "confidence": "high",
-      "reasoning": "This link appears multiple times in the content specifically referenced as 'August Calendar' for public skating times, stick & puck sessions, and freestyle sessions. The document ID and URL pattern suggest it's a current schedule document."
+      "reasoning": "Direct link to August calendar explicitly referenced in content for public skating times, stick & puck sessions, and freestyle skating schedules"
     },
     {
-      "schedule_link": "https://www.kirkwoodparksandrec.org/home/showpublisheddocument/16390/638897281660275522",
+      "schedule_link": "https://www.kirkwoodparksandrec.org/home/showpublisheddocument/16468",
       "parent_page_link": "https://www.kirkwoodparksandrec.org/places-to-go/facilities/ice-arena",
       "ice_rink_name": "Kirkwood Ice Arena",
       "year": 2025,
       "month": "September",
-      "schedule_type": "Public Skating",
-      "confidence": "low",
-      "reasoning": "While September schedules would normally be available, the content mentions that skating lessons begin September 8, suggesting general ice schedules should be available, but no direct September calendar link is provided. Users should check the main ice arena page for updates."
+      "schedule_type": "Public Skating, Stick & Puck, Freestyle Sessions",
+      "confidence": "high",
+      "reasoning": "Direct link to September calendar explicitly referenced in content for public skating times, stick & puck sessions, and freestyle skating schedules"
     },
     {
       "schedule_link": "https://www.crevecoeurmo.gov/ImageRepository/Document?documentID=13295",
@@ -30,7 +30,17 @@
       "month": "August",
       "schedule_type": "Public Ice Sessions",
       "confidence": "high",
-      "reasoning": "Found direct link to August 2025 schedule image in document repository (documentID=13295) referenced with text 'August 2025 Public' in the page content. This appears to be the current month's public skating schedule based on the URL pattern and context."
+      "reasoning": "Direct link to August 2025 public schedule image, referenced in content as 'August 2025 Public' with matching document ID pattern"
+    },
+    {
+      "schedule_link": "https://www.crevecoeurmo.gov/ImageRepository/Document?documentID=13315",
+      "parent_page_link": "https://www.crevecoeurmo.gov/562/Public-Ice-Sessions",
+      "ice_rink_name": "Creve Coeur Ice Arena",
+      "year": 2025,
+      "month": "September",
+      "schedule_type": "Public Ice Sessions",
+      "confidence": "high",
+      "reasoning": "Direct link to September 2025 public schedule image, referenced in content as 'Sept 2025 Public' with matching document ID pattern"
     },
     {
       "schedule_link": "https://www.brentwoodmo.org/DocumentCenter/View/34585/August-2025-Ice-Schedule",
@@ -40,7 +50,17 @@
       "month": "August",
       "schedule_type": "Monthly Ice Schedule",
       "confidence": "high",
-      "reasoning": "Direct link to August 2025 ice schedule document, explicitly labeled as 'August 2025 Ice Schedule - Updated 7/22' in the main content"
+      "reasoning": "Direct link to August 2025 schedule document, explicitly labeled as 'August 2025 Ice Schedule - Updated 7/22'"
+    },
+    {
+      "schedule_link": "https://www.brentwoodmo.org/DocumentCenter/View/34706/September-2025-Ice-Schedule",
+      "parent_page_link": "https://www.brentwoodmo.org/2358/Skating-Sessions",
+      "ice_rink_name": "Brentwood Ice Rink",
+      "year": 2025,
+      "month": "September",
+      "schedule_type": "Monthly Ice Schedule",
+      "confidence": "high",
+      "reasoning": "Direct link to September 2025 schedule document, explicitly labeled as 'September 2025 Ice Schedule'"
     },
     {
       "schedule_link": "https://centene.finnlyconnect.com/registration/activityitem/4762",
@@ -50,7 +70,7 @@
       "month": "August/September",
       "schedule_type": "Public Skating",
       "confidence": "medium",
-      "reasoning": "This is their public skate registration system that shows available sessions. While not a direct schedule view, the FAQ states 'Check above calendar and make sure your date is available' suggesting this link allows users to view current public skating times when selecting registration dates."
+      "reasoning": "This is their online registration system that shows available public skate sessions. The page content mentions 'Check above calendar and make sure your date is available' suggesting current schedule information is displayed after clicking through."
     },
     {
       "schedule_link": "https://www.centenecommunityicecenter.com/calendar-of-events",
@@ -60,7 +80,7 @@
       "month": "August/September",
       "schedule_type": "General Ice Schedule",
       "confidence": "medium",
-      "reasoning": "This appears to be their main calendar of events page that would show all ice activities. The main content references checking 'above calendar' for public skate times, suggesting this calendar view shows current ice schedules."
+      "reasoning": "This appears to be their main calendar page showing all ice activities. The content indicates public skate sessions are offered 'almost daily year-round (depending on the ice schedule)' with reference to checking the calendar."
     }
   ]
 }
