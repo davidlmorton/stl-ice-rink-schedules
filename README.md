@@ -55,6 +55,8 @@ pipenv run python generate_website.py
 
 This creates a static website in the `docs/` folder, ready for GitHub Pages.
 
+The generator automatically handles cache-busting by using timestamps to version CSS/JS assets, ensuring browsers always load your latest changes while maintaining efficient caching.
+
 ## How It Works
 
 1. **Crawl4AI** intelligently crawls ice rink websites with smart content filtering optimized for AI analysis
@@ -105,6 +107,32 @@ pipenv shell
 
 The `Pipfile` contains unpinned dependencies, while `Pipfile.lock` contains the exact pinned versions for reproducible builds.
 
+## Cache-Busting & Updates
+
+The website generator automatically handles browser caching issues:
+
+- **External Assets**: CSS and JavaScript are in separate files for better cache management
+- **Version-Based URLs**: Assets include timestamp query parameters (e.g., `styles.css?v=1703532123`)
+- **Automatic Updates**: Every time you regenerate the site, browsers will fetch the latest assets
+- **Smart Caching**: Long-term caching for performance with automatic invalidation on updates
+
+**Workflow for updates:**
+```bash
+# 1. Make your changes and collect new schedules
+pipenv run python admin.py
+
+# 2. Generate the updated website
+pipenv run python generate_website.py
+
+# 3. Commit and push your changes
+git add . && git commit -m "Update schedules"
+git push
+
+# 4. GitHub Pages automatically deploys with cache-busting
+```
+
+Users will automatically get fresh content without needing to hard-refresh their browsers.
+
 ## Features
 
 - **Simple**: No flags, no complex options - just run and go
@@ -116,6 +144,7 @@ The `Pipfile` contains unpinned dependencies, while `Pipfile.lock` contains the 
 - **Mobile-Friendly**: Responsive design with modal dialogs for detailed reasoning
 - **Dual Links**: Easy access to both schedule documents and main ice rink sites
 - **Alphabetical Organization**: Rinks sorted alphabetically for easy navigation
+- **Cache-Busting**: Automatic browser cache invalidation on updates without losing caching benefits
 
 ## Requirements
 
@@ -130,7 +159,9 @@ The `Pipfile` contains unpinned dependencies, while `Pipfile.lock` contains the 
 - `generate_website.py` - Static website generator
 - `sites.json` - Configuration file for ice rink websites
 - `schedules.json` - Output data from admin CLI
-- `docs/index.html` - Generated static website
+- `docs/index.html` - Generated static website (with cache-busting)
+- `docs/styles.css` - External stylesheet (auto-generated)
+- `docs/script.js` - External JavaScript (auto-generated)
 - `Pipfile` - Python dependencies
 - `Pipfile.lock` - Locked dependency versions
 - `.env` - Environment variables (API keys)
