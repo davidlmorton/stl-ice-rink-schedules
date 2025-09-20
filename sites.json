@@ -1,6 +1,10 @@
 {
   "sites": [
     {
+      "name": "Webster Groves Ice Arena",
+      "url": "https://www.webstergrovesmo.gov/197/Ice-Arena"
+    },
+    {
       "name": "Kirkwood Ice Arena",
       "url": "https://www.kirkwoodparksandrec.org/places-to-go/facilities/ice-arena"
     },

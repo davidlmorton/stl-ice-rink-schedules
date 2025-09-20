@@ -1,16 +1,46 @@
 {
-  "timestamp": "2025-09-05T15:12:21.472402",
-  "total_schedules": 8,
+  "timestamp": "2025-09-20T16:05:17.845446",
+  "total_schedules": 9,
   "schedules": [
+    {
+      "schedule_link": "https://www.webstergrovesmo.gov/DocumentCenter/View/13300/25-Sept",
+      "parent_page_link": "https://www.webstergrovesmo.gov/197/Ice-Arena",
+      "ice_rink_name": "Webster Groves Ice Arena",
+      "year": 2025,
+      "month": "September",
+      "schedule_type": "Monthly Schedule",
+      "confidence": "high",
+      "reasoning": "Direct link to September 2025 schedule document, clearly labeled as 'September Schedule' in the main content"
+    },
+    {
+      "schedule_link": "https://www.webstergrovesmo.gov/DocumentCenter/View/13233/25-oct",
+      "parent_page_link": "https://www.webstergrovesmo.gov/197/Ice-Arena",
+      "ice_rink_name": "Webster Groves Ice Arena",
+      "year": 2025,
+      "month": "October",
+      "schedule_type": "Monthly Schedule",
+      "confidence": "high",
+      "reasoning": "Direct link to October 2025 schedule document, clearly labeled as 'October Schedule' in the main content"
+    },
     {
       "schedule_link": "https://www.kirkwoodparksandrec.org/home/showpublisheddocument/16468/638914750165870000",
       "parent_page_link": "https://www.kirkwoodparksandrec.org/places-to-go/facilities/ice-arena",
       "ice_rink_name": "Kirkwood Ice Arena",
       "year": 2025,
       "month": "September",
-      "schedule_type": "Public Skating, Stick & Puck, Freestyle",
+      "schedule_type": "public skating, stick and puck, freestyle sessions",
       "confidence": "high",
-      "reasoning": "Direct link to September schedule document, explicitly referenced in content for public skating times, stick & puck, and freestyle sessions"
+      "reasoning": "Direct link to September 2025 schedule document, referenced multiple times in content for public skating, stick/puck, and freestyle sessions"
+    },
+    {
+      "schedule_link": "https://www.kirkwoodparksandrec.org/home/showpublisheddocument/16546/638935303856100000",
+      "parent_page_link": "https://www.kirkwoodparksandrec.org/places-to-go/facilities/ice-arena",
+      "ice_rink_name": "Kirkwood Ice Arena",
+      "year": 2025,
+      "month": "October",
+      "schedule_type": "public skating, stick and puck, freestyle sessions",
+      "confidence": "high",
+      "reasoning": "Direct link to October 2025 schedule document, referenced multiple times in content for public skating, stick/puck, and freestyle sessions"
     },
     {
       "schedule_link": "https://www.crevecoeurmo.gov/ImageRepository/Document?documentID=13315",
@@ -20,27 +50,47 @@
       "month": "September",
       "schedule_type": "Public Ice Sessions",
       "confidence": "high",
-      "reasoning": "Direct link to September 2025 schedule image, explicitly referenced as 'Sept 2025 Public' in the page content"
+      "reasoning": "Direct link to September 2025 schedule image, referenced as 'Sept 2025 Public' in cleaned content with specific document ID 13315"
     },
     {
-      "schedule_link": "https://www.brentwoodmo.org/DocumentCenter/View/34717/September-2025-Ice-Schedule-Updated-92",
+      "schedule_link": "https://www.brentwoodmo.org/DocumentCenter/View/34741/September-2025-Ice-Schedule---Updated-918",
       "parent_page_link": "https://www.brentwoodmo.org/2358/Skating-Sessions",
       "ice_rink_name": "Brentwood Ice Rink",
       "year": 2025,
       "month": "September",
       "schedule_type": "Monthly Ice Schedule",
       "confidence": "high",
-      "reasoning": "Direct link to September 2025 ice schedule document, recently updated (9/2). Link text explicitly states 'September 2025 Ice Schedule' and is referenced from main skating sessions page."
+      "reasoning": "Direct link to September 2025 schedule document, recently updated (9/18), linked from main skating sessions page"
     },
     {
-      "schedule_link": "https://www.centenecommunityicecenter.com/calendar-of-events",
+      "schedule_link": "https://www.brentwoodmo.org/DocumentCenter/View/34732/October-2025-Ice-Schedule",
+      "parent_page_link": "https://www.brentwoodmo.org/2358/Skating-Sessions",
+      "ice_rink_name": "Brentwood Ice Rink",
+      "year": 2025,
+      "month": "October",
+      "schedule_type": "Monthly Ice Schedule",
+      "confidence": "high",
+      "reasoning": "Direct link to October 2025 schedule document, linked from main skating sessions page"
+    },
+    {
+      "schedule_link": "https://centene.finnlyconnect.com/registration/activityitem/4762",
       "parent_page_link": "https://www.centenecommunityicecenter.com/ice-skating/public-skating-1",
       "ice_rink_name": "Centene Community Ice Center",
       "year": 2025,
-      "month": "September-October",
+      "month": "September/October",
+      "schedule_type": "Public Skating",
+      "confidence": "low",
+      "reasoning": "While this is the registration portal mentioned in the page content for checking public skate schedules, the page indicates schedules should be checked in 'above calendar' which is not visible in the crawled content. The registration link may show available sessions but requires user interaction."
+    },
+    {
+      "schedule_link": "https://www.centenecommunityicecenter.com/calendar-of-events",
+      "parent_page_link": "https://www.centenecommunityicecenter.com/",
+      "ice_rink_name": "Centene Community Ice Center",
+      "year": 2025,
+      "month": "September/October",
       "schedule_type": "General Ice Schedule",
       "confidence": "medium",
-      "reasoning": "This appears to be the main calendar of events page that would show all ice activities. Content indicates public skate sessions are offered 'almost daily year-round (depending on the ice schedule)' with reference to checking the calendar."
+      "reasoning": "This appears to be the main calendar/events page that would show all ice activities. While not specifically showing Sept/Oct 2025 schedules in the crawled content, it's likely the primary place users would find current schedules."
     }
   ]
 }
