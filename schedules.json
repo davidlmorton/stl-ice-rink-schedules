@@ -1,36 +1,16 @@
 {
-  "timestamp": "2025-09-24T15:11:46.024485",
-  "total_schedules": 11,
+  "timestamp": "2025-10-06T14:27:29.442134",
+  "total_schedules": 7,
   "schedules": [
     {
-      "schedule_link": "https://www.webstergrovesmo.gov/DocumentCenter/View/13300/25-Sept",
-      "parent_page_link": "https://www.webstergrovesmo.gov/197/Ice-Arena",
-      "ice_rink_name": "Webster Groves Ice Arena",
-      "year": 2025,
-      "month": "September",
-      "schedule_type": "Monthly Schedule",
-      "confidence": "high",
-      "reasoning": "Direct link to September 2025 schedule document with clear naming convention (25-Sept) found in main ice arena page under 'Ice Arena Event Schedules' section"
-    },
-    {
-      "schedule_link": "https://www.webstergrovesmo.gov/DocumentCenter/View/13233/25-oct",
+      "schedule_link": "https://www.webstergrovesmo.gov/DocumentCenter/View/13580/25octrev",
       "parent_page_link": "https://www.webstergrovesmo.gov/197/Ice-Arena",
       "ice_rink_name": "Webster Groves Ice Arena",
       "year": 2025,
       "month": "October",
-      "schedule_type": "Monthly Schedule",
+      "schedule_type": "Monthly Public Skate Calendar",
       "confidence": "high",
-      "reasoning": "Direct link to October 2025 schedule document with clear naming convention (25-oct) found in main ice arena page under 'Ice Arena Event Schedules' section"
-    },
-    {
-      "schedule_link": "https://www.kirkwoodparksandrec.org/home/showpublisheddocument/16468/638914750165870000",
-      "parent_page_link": "https://www.kirkwoodparksandrec.org/places-to-go/facilities/ice-arena",
-      "ice_rink_name": "Kirkwood Ice Arena",
-      "year": 2025,
-      "month": "September",
-      "schedule_type": "Public Skating, Stick & Puck, Freestyle Sessions",
-      "confidence": "high",
-      "reasoning": "Direct link to September 2025 schedule document, referenced multiple times in content for public skating, stick & puck, and freestyle sessions"
+      "reasoning": "Direct link labeled 'October Skate Calendar' and is specifically referenced under 'Ice Arena Event Schedules' section. Document ID 13580 suggests a current schedule document. The arena is announced to reopen October 6, 2025 with reference to 'see schedule below' pointing to this calendar."
     },
     {
       "schedule_link": "https://www.kirkwoodparksandrec.org/home/showpublisheddocument/16546/638935303856100000",
@@ -38,39 +18,29 @@
       "ice_rink_name": "Kirkwood Ice Arena",
       "year": 2025,
       "month": "October",
-      "schedule_type": "Public Skating, Stick & Puck, Freestyle Sessions",
+      "schedule_type": "General Monthly Calendar",
       "confidence": "high",
-      "reasoning": "Direct link to October 2025 schedule document, referenced multiple times in content for public skating, stick & puck, and freestyle sessions"
+      "reasoning": "This link is referenced multiple times in the content for October public skating times, stick & puck sessions, and freestyle sessions. It appears to be the main October 2025 schedule document."
     },
     {
-      "schedule_link": "https://www.crevecoeurmo.gov/ImageRepository/Document?documentID=13315",
-      "parent_page_link": "https://www.crevecoeurmo.gov/562/Public-Ice-Sessions",
-      "ice_rink_name": "Creve Coeur Ice Arena",
+      "schedule_link": null,
+      "parent_page_link": "https://www.kirkwoodparksandrec.org/places-to-go/facilities/ice-arena",
+      "ice_rink_name": "Kirkwood Ice Arena",
       "year": 2025,
-      "month": "September",
-      "schedule_type": "Public Ice Sessions",
-      "confidence": "high",
-      "reasoning": "Direct link to September 2025 public ice schedule image, referenced in content as 'Sept 2025 Public'"
+      "month": "November",
+      "schedule_type": "General Schedule Information",
+      "confidence": "low",
+      "reasoning": "While November 2025 is mentioned in the context of skating lessons (Session 2: Nov 3-Dec 15), no direct schedule document link is provided yet for November general ice times. Users should check back on the main ice arena page for updates."
     },
     {
-      "schedule_link": "https://www.crevecoeurmo.gov/ImageRepository/Document?documentID=13367",
+      "schedule_link": "https://www.crevecoeurmo.gov/ImageRepository/Document?documentID=13395",
       "parent_page_link": "https://www.crevecoeurmo.gov/562/Public-Ice-Sessions",
       "ice_rink_name": "Creve Coeur Ice Arena",
       "year": 2025,
       "month": "October",
       "schedule_type": "Public Ice Sessions",
       "confidence": "high",
-      "reasoning": "Direct link to October 2025 public ice schedule image, referenced in content as 'Oct. Public 2025'"
-    },
-    {
-      "schedule_link": "https://www.brentwoodmo.org/DocumentCenter/View/34748/September-2025-Ice-Schedule---Updated-923",
-      "parent_page_link": "https://www.brentwoodmo.org/2358/Skating-Sessions",
-      "ice_rink_name": "Brentwood Ice Rink",
-      "year": 2025,
-      "month": "September",
-      "schedule_type": "Monthly Ice Schedule",
-      "confidence": "high",
-      "reasoning": "Direct link to September 2025 schedule document, recently updated (9/23), linked from main skating sessions page"
+      "reasoning": "Found direct link to October schedule image in ImageRepository with recent document ID 13395. The page also includes a specific closure notice for October 14, 2025, confirming this is current schedule content."
     },
     {
       "schedule_link": "https://www.brentwoodmo.org/DocumentCenter/View/34732/October-2025-Ice-Schedule",
@@ -80,37 +50,27 @@
       "month": "October",
       "schedule_type": "Monthly Ice Schedule",
       "confidence": "high",
-      "reasoning": "Direct link to October 2025 schedule document, linked from main skating sessions page"
-    },
-    {
-      "schedule_link": "https://www.brentwoodmo.org/203/Ice-Rink",
-      "parent_page_link": "https://www.brentwoodmo.org/2358/Skating-Sessions",
-      "ice_rink_name": "Brentwood Ice Rink",
-      "year": 2025,
-      "month": "Both",
-      "schedule_type": "Main Ice Rink Information Page",
-      "confidence": "medium",
-      "reasoning": "Main ice rink page that likely contains or links to current schedules and general rink information"
+      "reasoning": "Direct link to October 2025 ice schedule document found in main content, clearly labeled as current month's schedule"
     },
     {
       "schedule_link": "https://centene.finnlyconnect.com/registration/activityitem/4762",
       "parent_page_link": "https://www.centenecommunityicecenter.com/ice-skating/public-skating-1",
       "ice_rink_name": "Centene Community Ice Center",
       "year": 2025,
-      "month": "September/October",
+      "month": "October-November",
       "schedule_type": "Public Skating",
       "confidence": "medium",
-      "reasoning": "This is their main public skating registration/schedule system linked multiple times in the content with instruction to 'Check above calendar and make sure your date is available.' While not a direct schedule view, it's referenced as the primary way to view available public skate sessions."
+      "reasoning": "While this is the current registration portal mentioned on the public skating page, the listing appears to be more of a registration system than a viewable schedule. However, it's notable that the page mentions 'Check above calendar' implying there should be a schedule calendar, though it's not directly accessible in the provided content."
     },
     {
-      "schedule_link": "https://www.centenecommunityicecenter.com/calendar-of-events",
+      "schedule_link": "https://www.centenecommunityicecenter.com/events",
       "parent_page_link": "https://www.centenecommunityicecenter.com/ice-skating/public-skating-1",
       "ice_rink_name": "Centene Community Ice Center",
       "year": 2025,
-      "month": "September/October",
-      "schedule_type": "General Ice Schedule",
+      "month": "October-November",
+      "schedule_type": "General Events/Public Skating",
       "confidence": "medium",
-      "reasoning": "Main calendar of events page that should show all ice activities. Content indicates public skate sessions are shown on calendar and users should check calendar for available dates."
+      "reasoning": "The 'Buy Tickets' link leads to an events page that likely contains current public skating sessions and ice time availability. This appears to be the main portal for viewing current schedules, though specific calendar content isn't visible in the provided data."
     }
   ]
 }
