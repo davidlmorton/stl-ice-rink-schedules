@@ -329,6 +329,158 @@ Extract every relevant schedule URL from the cleaned content and links. Include 
             print(f"❌ Error calling Claude: {e}")
             return []
 
+    def filter_best_schedules_per_month(self, all_schedules):
+        """Second pass: Use Claude to select the very best schedule link for each (location, month) combination"""
+        if not all_schedules:
+            return []
+
+        print(f"\n🔍 Second Pass: Filtering {len(all_schedules)} schedules to find the best link per location per month...")
+
+        # Group schedules by ice_rink_name + month-year
+        location_month_groups = {}
+        for schedule in all_schedules:
+            ice_rink = schedule.get('ice_rink_name', 'Unknown')
+            month = schedule.get('month', 'Unknown')
+            year = schedule.get('year', 'Unknown')
+            key = f"{ice_rink} - {month} {year}"
+
+            if key not in location_month_groups:
+                location_month_groups[key] = []
+            location_month_groups[key].append(schedule)
+
+        print(f"📅 Found schedules for {len(location_month_groups)} location-month combination(s):")
+        for key in sorted(location_month_groups.keys()):
+            print(f"    • {key} ({len(location_month_groups[key])} schedules)")
+
+        filtered_schedules = []
+
+        for location_month, schedules in location_month_groups.items():
+            if len(schedules) == 1:
+                # Only one schedule for this location-month, but still check parent_link != schedule_link
+                schedule = schedules[0]
+                if schedule.get('parent_page_link') != schedule.get('schedule_link'):
+                    filtered_schedules.append(schedule)
+                    print(f"✅ {location_month}: Only 1 schedule found, keeping it")
+                else:
+                    print(f"⚠️  {location_month}: Skipping - parent_link same as schedule_link")
+                continue
+
+            print(f"\n🤖 Analyzing {len(schedules)} schedules for {location_month}...")
+
+            # Create prompt for Claude to choose the best schedule
+            schedules_json = json.dumps(schedules, indent=2)
+
+            prompt = f"""You are analyzing multiple schedule links found for {location_month} ice rink schedules. Your job is to select the SINGLE BEST link that will help users find current ice skating schedules.
+
+SCHEDULES TO ANALYZE:
+{schedules_json}
+
+SELECTION CRITERIA (in order of importance):
+1. MUST EXCLUDE: Links where parent_page_link is the same as schedule_link (these are usually navigation pages, not direct schedule documents)
+2. PREFER: Direct links to schedule documents (PDFs, ImageRepository documents, calendar viewers)
+3. PREFER: Links with "high" confidence over "medium" or "low"
+4. PREFER: Links that specifically mention the target month in their reasoning or URL
+5. PREFER: Links to actual schedule documents over general information pages
+6. AVOID: General navigation links, contact pages, or registration systems
+
+TASK: Select the single best schedule link for {location_month}. If all links have parent_page_link = schedule_link, return null.
+
+Respond with valid JSON only:
+{{
+  "selected_schedule": <full_schedule_object_or_null>,
+  "reasoning": "<explanation_of_why_this_is_the_best_choice>",
+  "rejected_count": <number_of_schedules_rejected>
+}}"""
+
+            try:
+                message = self.claude_client.messages.create(
+                    model="claude-sonnet-4-5-20250929",
+                    max_tokens=1000,
+                    messages=[
+                        {
+                            "role": "user",
+                            "content": prompt
+                        }
+                    ]
+                )
+
+                response_text = message.content[0].text.strip()
+
+                # Parse Claude's JSON response
+                try:
+                    json_start = response_text.find('{')
+                    json_end = response_text.rfind('}') + 1
+
+                    if json_start != -1 and json_end > json_start:
+                        json_text = response_text[json_start:json_end]
+                        analysis = json.loads(json_text)
+
+                        selected = analysis.get('selected_schedule')
+                        reasoning = analysis.get('reasoning', 'No reasoning provided')
+                        rejected_count = analysis.get('rejected_count', 0)
+
+                        if selected:
+                            filtered_schedules.append(selected)
+                            print(f"✅ {location_month}: Selected best schedule (rejected {rejected_count})")
+                            print(f"   📄 Link: {selected.get('schedule_link', '')}")
+                            print(f"   🧠 Reasoning: {reasoning}")
+                        else:
+                            print(f"❌ {location_month}: No valid schedules found (rejected {rejected_count})")
+                            print(f"   🧠 Reasoning: {reasoning}")
+
+                    else:
+                        print(f"❌ {location_month}: No valid JSON in Claude response")
+
+                except json.JSONDecodeError as e:
+                    print(f"❌ {location_month}: JSON parsing error: {e}")
+
+            except Exception as e:
+                print(f"❌ {location_month}: Error calling Claude for filtering: {e}")
+
+        print(f"\n📊 Second pass complete: {len(all_schedules)} → {len(filtered_schedules)} schedules")
+        return filtered_schedules
+
+    def add_static_schedules(self, schedules):
+        """Add hard-coded schedule links that never change"""
+        print(f"\n📌 Adding static/hard-coded schedule links...")
+
+        current_date = datetime.now()
+        current_month = current_date.strftime('%B')
+        current_year = current_date.year
+        next_month_date = datetime(current_year if current_date.month < 12 else current_year + 1,
+                                 current_date.month + 1 if current_date.month < 12 else 1, 1)
+        next_month = next_month_date.strftime('%B')
+        next_year = next_month_date.year
+
+        static_schedules = [
+            {
+                "schedule_link": "https://centene.finnlyconnect.com/registration/activityitem/4762",
+                "parent_page_link": "https://www.centenecommunityicecenter.com/ice-skating/public-skating-1",
+                "ice_rink_name": "Centene Community Ice Center",
+                "year": current_year,
+                "month": current_month,
+                "schedule_type": "Public Skating Registration",
+                "confidence": "high",
+                "reasoning": "Hard-coded static link that never changes - direct registration page for public skating"
+            },
+            {
+                "schedule_link": "https://centene.finnlyconnect.com/registration/activityitem/4762",
+                "parent_page_link": "https://www.centenecommunityicecenter.com/ice-skating/public-skating-1",
+                "ice_rink_name": "Centene Community Ice Center",
+                "year": next_year,
+                "month": next_month,
+                "schedule_type": "Public Skating Registration",
+                "confidence": "high",
+                "reasoning": "Hard-coded static link that never changes - direct registration page for public skating"
+            }
+        ]
+
+        # Add static schedules to the results
+        schedules.extend(static_schedules)
+        print(f"✅ Added {len(static_schedules)} static schedule(s) for Centene Community Ice Center")
+
+        return schedules
+
     async def process_all_sites(self):
         """Process all sites and collect schedule information using Crawl4AI"""
         print("\n" + "=" * 80)
@@ -360,10 +512,24 @@ Extract every relevant schedule URL from the cleaned content and links. Include 
                 print(f"⚠️  Could not crawl content for {site.get('name', 'Unknown')}")
 
         print(f"\n" + "=" * 80)
-        print(f"✅ Collection complete! Found {len(all_schedules)} total schedules")
+        print(f"✅ First pass complete! Found {len(all_schedules)} total schedules")
         print("=" * 80)
 
-        return all_schedules
+        # Second pass: Filter to best schedule per month
+        if all_schedules:
+            filtered_schedules = self.filter_best_schedules_per_month(all_schedules)
+
+            # Add static/hard-coded schedules
+            final_schedules = self.add_static_schedules(filtered_schedules)
+
+            print(f"\n" + "=" * 80)
+            print(f"🎯 Final results: {len(final_schedules)} high-quality schedules (including static links)")
+            print("=" * 80)
+            return final_schedules
+        else:
+            # Even if no dynamic schedules found, still add static ones
+            static_only = self.add_static_schedules([])
+            return static_only
 
     def save_results(self, schedules, output_file="schedules.json"):
         """Save results to JSON file"""
@@ -372,6 +538,8 @@ Extract every relevant schedule URL from the cleaned content and links. Include 
         output_data = {
             "timestamp": datetime.now().isoformat(),
             "total_schedules": len(schedules),
+            "description": "High-quality ice rink schedules selected via two-pass AI filtering plus static hard-coded links",
+            "filtering_notes": "Second pass removed duplicates and selected best link per (location, month) combination where parent_page_link != schedule_link. Static schedules added for reliable links that never change.",
             "schedules": schedules
         }
 
@@ -393,11 +561,12 @@ async def main():
             finder.save_results(schedules)
 
             # Print summary
-            print(f"\n📊 SUMMARY:")
+            print(f"\n📊 FINAL SUMMARY (Two-Pass Filtered Results):")
             for schedule in schedules:
                 print(f"   • {schedule.get('ice_rink_name', 'Unknown')} - {schedule.get('month', '?')} {schedule.get('year', '?')} - {schedule.get('schedule_type', 'Unknown')}")
-                print(f"     Schedule: {schedule.get('schedule_link', '')}")
-                print(f"     Parent: {schedule.get('parent_page_link', '')}")
+                print(f"     📄 Schedule: {schedule.get('schedule_link', '')}")
+                print(f"     🏠 Parent: {schedule.get('parent_page_link', '')}")
+                print(f"     🎯 Confidence: {schedule.get('confidence', 'unknown')}")
         else:
             print("\n⚠️  No schedules found")
 
