@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-11-02T12:37:04.352060",
-  "total_schedules": 8,
+  "timestamp": "2025-11-25T18:51:56.185073",
+  "total_schedules": 12,
   "description": "High-quality ice rink schedules selected via two-pass AI filtering plus static hard-coded links",
   "filtering_notes": "Second pass removed duplicates and selected best link per (location, month) combination where parent_page_link != schedule_link. Static schedules added for reliable links that never change.",
   "schedules": [
@@ -10,66 +10,76 @@
       "ice_rink_name": "Webster Groves Ice Arena",
       "year": 2025,
       "month": "November",
-      "schedule_type": "Monthly Skate Calendar (PDF)",
+      "schedule_type": "Monthly Skate Calendar",
       "confidence": "high",
-      "reasoning": "Direct link to November 2025 Skate Calendar PDF document, clearly labeled on the main Ice Arena page. This is the primary schedule document for November 2025."
+      "reasoning": "Direct PDF link labeled 'November Skate Calendar (PDF)' explicitly references November 2025 schedule. This is the primary schedule document users need for current month viewing."
     },
     {
-      "schedule_link": "https://www.webstergrovesmo.gov/DocumentCenter/View/8076/October-2025",
-      "parent_page_link": "https://www.webstergrovesmo.gov/197/Ice-Arena",
-      "ice_rink_name": "Webster Groves Ice Arena",
-      "year": 2025,
-      "month": "October",
-      "schedule_type": "Monthly Skate Calendar (PDF)",
-      "confidence": "medium",
-      "reasoning": "October 2025 schedule is referenced on the page. While this is past the target months, it shows the pattern for schedule documents and may be useful for reference or if December schedule follows similar URL pattern."
-    },
-    {
-      "schedule_link": "https://www.kirkwoodparksandrec.org/home/showpublisheddocument/16777/638969842915900000",
+      "schedule_link": "https://www.kirkwoodparksandrec.org/home/showpublisheddocument/16915/638996827730575070",
       "parent_page_link": "https://www.kirkwoodparksandrec.org/places-to-go/facilities/ice-arena",
       "ice_rink_name": "Kirkwood Ice Arena",
       "year": 2025,
       "month": "November",
       "schedule_type": "Public Skating, Stick and Puck, Freestyle Sessions",
       "confidence": "high",
-      "reasoning": "Direct link to November calendar document referenced multiple times in the content. The page explicitly states 'Click here for November Public Skating times', 'Click here for the November Calendar' for Stick and Puck, and again for Freestyle Sessions. This document ID (16777) contains comprehensive general ice schedule information for November 2025."
+      "reasoning": "Direct link to November calendar document referenced multiple times in content for public skating times, stick and puck sessions, and freestyle sessions. Content explicitly states 'Click here for November Public Skating times' and references this same link for November Calendar under Stick and Puck and Freestyle sections."
     },
     {
-      "schedule_link": "https://www.crevecoeurmo.gov/ImageRepository/Document?documentID=13410",
+      "schedule_link": "https://www.kirkwoodparksandrec.org/home/showpublisheddocument/16913/638996789717730285",
+      "parent_page_link": "https://www.kirkwoodparksandrec.org/places-to-go/facilities/ice-arena",
+      "ice_rink_name": "Kirkwood Ice Arena",
+      "year": 2025,
+      "month": "December",
+      "schedule_type": "Public Skating, Stick and Puck, Freestyle Sessions",
+      "confidence": "high",
+      "reasoning": "Direct link to December calendar document referenced multiple times in content for public skating times, stick and puck sessions, and freestyle sessions. Content explicitly states 'here for December Public Skating times' and references this same link for December Calendar under Stick and Puck and Freestyle sections."
+    },
+    {
+      "schedule_link": "https://www.crevecoeurmo.gov/ImageRepository/Document?documentID=13491",
       "parent_page_link": "https://www.crevecoeurmo.gov/562/Public-Ice-Sessions",
       "ice_rink_name": "Creve Coeur Ice Arena",
       "year": 2025,
       "month": "November",
-      "schedule_type": "Public Ice Sessions Schedule",
+      "schedule_type": "Public Ice Sessions (Freestyle, Stick and Puck, Public Skate)",
       "confidence": "high",
-      "reasoning": "Direct link to November 2025 public ice schedule document. The alt text 'Nov 2025 Public' explicitly indicates this is the November 2025 public skating schedule, matching the target month exactly."
+      "reasoning": "Direct link to November 2025 skate schedule image. The page content shows this as 'Nov Skate Schedule revised' and it's displayed on the Public Ice Sessions page which explicitly states it includes 'hours of operation for freestyle, stick and puck, and public skate.'"
     },
     {
-      "schedule_link": "https://www.brentwoodmo.org/DocumentCenter/View/34852/November-2025-Ice-Schedule-UPDATED",
+      "schedule_link": "https://www.crevecoeurmo.gov/ImageRepository/Document?documentID=13501",
+      "parent_page_link": "https://www.crevecoeurmo.gov/562/Public-Ice-Sessions",
+      "ice_rink_name": "Creve Coeur Ice Arena",
+      "year": 2025,
+      "month": "December",
+      "schedule_type": "Public Ice Sessions (Freestyle, Stick and Puck, Public Skate)",
+      "confidence": "high",
+      "reasoning": "Direct link to December 2025 public schedule image. The page content shows this as 'DEC. 2025 Public' and it's displayed on the Public Ice Sessions page containing general ice arena schedules for public skating, freestyle, and stick and puck sessions."
+    },
+    {
+      "schedule_link": "https://www.brentwoodmo.org/DocumentCenter/View/34934/November-2025-Ice-Schedule-UPDATED-111825",
       "parent_page_link": "https://www.brentwoodmo.org/2358/Skating-Sessions",
       "ice_rink_name": "Brentwood Ice Rink",
       "year": 2025,
       "month": "November",
-      "schedule_type": "General Ice Schedule",
+      "schedule_type": "Monthly Ice Schedule",
       "confidence": "high",
-      "reasoning": "Direct link to November 2025 ice schedule document, updated as of 10/30/2025. This is explicitly labeled as the November 2025 Ice Schedule and is prominently displayed on the Skating Sessions page for users to access current schedule information."
+      "reasoning": "Direct link to November 2025 ice schedule document, updated as of 11/18/25. This is the primary schedule document users need for current month ice times."
     },
     {
-      "schedule_link": "https://centene.finnlyconnect.com/registration/activityitem/4762",
-      "parent_page_link": "https://www.centenecommunityicecenter.com/ice-skating/public-skating-1",
-      "ice_rink_name": "Centene Community Ice Center",
-      "year": 2025,
-      "month": "November",
-      "schedule_type": "Public Skating Registration",
-      "confidence": "high",
-      "reasoning": "Hard-coded static link that never changes - direct registration page for public skating"
-    },
-    {
-      "schedule_link": "https://centene.finnlyconnect.com/registration/activityitem/4762",
-      "parent_page_link": "https://www.centenecommunityicecenter.com/ice-skating/public-skating-1",
-      "ice_rink_name": "Centene Community Ice Center",
+      "schedule_link": "https://www.brentwoodmo.org/DocumentCenter/View/34965/December-2025-Ice-Schedule",
+      "parent_page_link": "https://www.brentwoodmo.org/2358/Skating-Sessions",
+      "ice_rink_name": "Brentwood Ice Rink",
       "year": 2025,
       "month": "December",
+      "schedule_type": "Monthly Ice Schedule",
+      "confidence": "high",
+      "reasoning": "Direct link to December 2025 ice schedule document. This provides users with the complete ice schedule for the upcoming month."
+    },
+    {
+      "schedule_link": "https://centene.finnlyconnect.com/registration/activityitem/4762",
+      "parent_page_link": "https://www.centenecommunityicecenter.com/ice-skating/public-skating-1",
+      "ice_rink_name": "Centene Community Ice Center",
+      "year": 2025,
+      "month": "Always",
       "schedule_type": "Public Skating Registration",
       "confidence": "high",
       "reasoning": "Hard-coded static link that never changes - direct registration page for public skating"
