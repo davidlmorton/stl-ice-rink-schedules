@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-12-01T09:11:01.911278",
-  "total_schedules": 5,
+  "timestamp": "2025-12-30T14:34:27.248051",
+  "total_schedules": 10,
   "description": "High-quality ice rink schedules selected via two-pass AI filtering plus static hard-coded links",
   "filtering_notes": "Second pass removed duplicates and selected best link per (location, month) combination where parent_page_link != schedule_link. Static schedules added for reliable links that never change.",
   "schedules": [
@@ -12,17 +12,37 @@
       "month": "December",
       "schedule_type": "Monthly Skate Calendar",
       "confidence": "high",
-      "reasoning": "Direct PDF link labeled 'December Skate Calendar (PDF)' in the Ice Arena Event Schedules section. This is explicitly the December 2025 schedule document users need."
+      "reasoning": "Direct PDF link labeled 'December Skate Calendar (PDF)' on the main Ice Arena page. This is the primary schedule document for December 2025 public skating and ice times."
     },
     {
-      "schedule_link": "https://www.kirkwoodparksandrec.org/home/showpublisheddocument/16913/638996789717730285",
+      "schedule_link": "https://www.webstergrovesmo.gov/DocumentCenter/View/13754/Jan-26",
+      "parent_page_link": "https://www.webstergrovesmo.gov/197/Ice-Arena",
+      "ice_rink_name": "Webster Groves Ice Arena",
+      "year": 2026,
+      "month": "January",
+      "schedule_type": "Monthly Skate Calendar",
+      "confidence": "high",
+      "reasoning": "Direct PDF link labeled 'January Skate Calendar (PDF)' on the main Ice Arena page. This is the primary schedule document for January 2026 public skating and ice times."
+    },
+    {
+      "schedule_link": "https://www.kirkwoodparksandrec.org/home/showpublisheddocument/16933/639002640511300000",
       "parent_page_link": "https://www.kirkwoodparksandrec.org/places-to-go/facilities/ice-arena",
       "ice_rink_name": "Kirkwood Ice Arena",
       "year": 2025,
       "month": "December",
       "schedule_type": "Public Skating, Stick and Puck, Freestyle Sessions",
       "confidence": "high",
-      "reasoning": "Direct link to December Public Skating schedule document referenced multiple times on the page. This document contains December 2025 public skating times, stick and puck sessions, and freestyle sessions as indicated by the text 'Click here for December Public Skating times' and repeated references to 'December Calendar' for various ice activities."
+      "reasoning": "Direct link to December calendar document referenced multiple times on the page for public skating times, stick and puck sessions, and freestyle sessions. This is the primary December schedule document users need."
+    },
+    {
+      "schedule_link": "https://www.kirkwoodparksandrec.org/home/showpublisheddocument/17171/639020191246830000",
+      "parent_page_link": "https://www.kirkwoodparksandrec.org/places-to-go/facilities/ice-arena",
+      "ice_rink_name": "Kirkwood Ice Arena",
+      "year": 2026,
+      "month": "January",
+      "schedule_type": "Public Skating, Stick and Puck, Freestyle Sessions",
+      "confidence": "high",
+      "reasoning": "Direct link to January calendar document referenced multiple times on the page for public skating times, stick and puck sessions, and freestyle sessions. This is the primary January schedule document users need."
     },
     {
       "schedule_link": "https://www.crevecoeurmo.gov/ImageRepository/Document?documentID=13501",
@@ -32,17 +52,37 @@
       "month": "December",
       "schedule_type": "Public Ice Sessions",
       "confidence": "high",
-      "reasoning": "Direct link to December 2025 public schedule image document (documentID=13501) with alt text 'DEC. 2025 Public' found on the Public Ice Sessions page. This matches the target month and appears to be the current schedule."
+      "reasoning": "Direct link to December 2025 public ice schedule document. The alt text 'DEC. 2025 Public' clearly indicates this is the current month's public skating schedule covering freestyle, stick and puck, and public skate hours."
     },
     {
-      "schedule_link": "https://www.brentwoodmo.org/DocumentCenter/View/34965/December-2025-Ice-Schedule",
+      "schedule_link": "https://www.crevecoeurmo.gov/ImageRepository/Document?documentID=13530",
+      "parent_page_link": "https://www.crevecoeurmo.gov/562/Public-Ice-Sessions",
+      "ice_rink_name": "Creve Coeur Ice Arena",
+      "year": 2026,
+      "month": "January",
+      "schedule_type": "Public Ice Sessions",
+      "confidence": "high",
+      "reasoning": "Direct link to January 2026 public ice schedule document. The alt text 'Jan. 2026 Public' clearly indicates this is the target month's public skating schedule covering freestyle, stick and puck, and public skate hours."
+    },
+    {
+      "schedule_link": "https://www.brentwoodmo.org/DocumentCenter/View/35002/December-2025-Ice-Schedule",
       "parent_page_link": "https://www.brentwoodmo.org/2358/Skating-Sessions",
       "ice_rink_name": "Brentwood Ice Rink",
       "year": 2025,
       "month": "December",
       "schedule_type": "Monthly Ice Schedule",
       "confidence": "high",
-      "reasoning": "Direct link to December 2025 Ice Schedule document explicitly listed on the Skating Sessions page. This is exactly what users need for December 2025 current schedule information."
+      "reasoning": "Direct link to December 2025 Ice Schedule document, explicitly mentioned on the Skating Sessions page with update date 12/17. This is the primary schedule document for the target month."
+    },
+    {
+      "schedule_link": "https://www.brentwoodmo.org/DocumentCenter/View/35022/January-2026-Ice-Schedule",
+      "parent_page_link": "https://www.brentwoodmo.org/2358/Skating-Sessions",
+      "ice_rink_name": "Brentwood Ice Rink",
+      "year": 2026,
+      "month": "January",
+      "schedule_type": "Monthly Ice Schedule",
+      "confidence": "high",
+      "reasoning": "Direct link to January 2026 Ice Schedule document, explicitly mentioned on the Skating Sessions page. This is the primary schedule document for the target month."
     },
     {
       "schedule_link": "https://centene.finnlyconnect.com/registration/activityitem/4762",
@@ -50,6 +90,16 @@
       "ice_rink_name": "Centene Community Ice Center",
       "year": 2025,
       "month": "December",
+      "schedule_type": "Public Skating Registration",
+      "confidence": "high",
+      "reasoning": "Hard-coded static link that never changes - direct registration page for public skating"
+    },
+    {
+      "schedule_link": "https://centene.finnlyconnect.com/registration/activityitem/4762",
+      "parent_page_link": "https://www.centenecommunityicecenter.com/ice-skating/public-skating-1",
+      "ice_rink_name": "Centene Community Ice Center",
+      "year": 2026,
+      "month": "January",
       "schedule_type": "Public Skating Registration",
       "confidence": "high",
       "reasoning": "Hard-coded static link that never changes - direct registration page for public skating"
