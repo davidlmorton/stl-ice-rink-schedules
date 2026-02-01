@@ -283,7 +283,7 @@ Extract every relevant schedule URL from the cleaned content and links. Include 
 
         try:
             message = self.claude_client.messages.create(
-                model="claude-sonnet-4-5-20250929",
+                model="claude-opus-4-5-20251101",
                 max_tokens=1500,
                 messages=[
                     {
@@ -394,7 +394,7 @@ Respond with valid JSON only:
 
             try:
                 message = self.claude_client.messages.create(
-                    model="claude-sonnet-4-5-20250929",
+                    model="claude-opus-4-5-20251101",
                     max_tokens=1000,
                     messages=[
                         {
