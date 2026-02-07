@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-01T12:22:05.620678",
+  "timestamp": "2026-02-07T10:53:49.066453",
   "total_schedules": 8,
   "description": "High-quality ice rink schedules selected via two-pass AI filtering plus static hard-coded links",
   "filtering_notes": "Second pass removed duplicates and selected best link per (location, month) combination where parent_page_link != schedule_link. Static schedules added for reliable links that never change.",
@@ -10,19 +10,9 @@
       "ice_rink_name": "Webster Groves Ice Arena",
       "year": 2026,
       "month": "February",
-      "schedule_type": "Monthly Skate Calendar",
+      "schedule_type": "monthly_skate_calendar",
       "confidence": "high",
-      "reasoning": "Direct PDF link labeled 'February Skate Calendar (PDF)' with document ID referencing Feb-2026, providing the complete February 2026 public skating schedule"
-    },
-    {
-      "schedule_link": "https://www.webstergrovesmo.gov/197/Ice-Arena",
-      "parent_page_link": "https://www.webstergrovesmo.gov/643/Parks-Recreation",
-      "ice_rink_name": "Webster Groves Ice Arena",
-      "year": 2026,
-      "month": "March",
-      "schedule_type": "Ice Arena Main Page",
-      "confidence": "medium",
-      "reasoning": "Main Ice Arena page where monthly schedule calendars are posted - March 2026 calendar not yet available but this is where it will be published based on the pattern of January and February calendars being linked here"
+      "reasoning": "Direct PDF link to 'February Skate Calendar' explicitly labeled for Feb-2026, found in the Ice Arena Event Schedules section of the main page."
     },
     {
       "schedule_link": "https://www.kirkwoodparksandrec.org/home/showpublisheddocument/17325/639051952894930000",
@@ -32,7 +22,7 @@
       "month": "February",
       "schedule_type": "Public Skating, Stick and Puck, Freestyle Sessions",
       "confidence": "high",
-      "reasoning": "Direct link to February schedule document referenced multiple times on the page for Public Skating times, Stick and Puck calendar, and Freestyle sessions. Note: Rink closes Feb 27, 2026 for renovations."
+      "reasoning": "Direct link to February Calendar document referenced multiple times on the page for Public Skating times, Stick and Puck sessions, and Freestyle Sessions. Note: The rink closes February 27, 2026 for renovations through July 31, so this schedule only covers February 1-26, 2026."
     },
     {
       "schedule_link": null,
@@ -40,9 +30,9 @@
       "ice_rink_name": "Kirkwood Ice Arena",
       "year": 2026,
       "month": "March",
-      "schedule_type": "CLOSED - Renovations",
+      "schedule_type": "No Schedule Available - Rink Closed",
       "confidence": "high",
-      "reasoning": "The rink will be CLOSED beginning Friday, Feb 27 through July 31 for renovations. No March 2026 schedule exists as the facility is closed for renovations including new Ice Plant, Floor, Lighting, and Dehumidification."
+      "reasoning": "IMPORTANT: The Ice Rink will be CLOSED beginning Friday, Feb. 27 through July 31 for renovations. No March 2026 schedule exists as the rink will not be operational. Users should be aware there is no ice skating available in March 2026."
     },
     {
       "schedule_link": "https://www.crevecoeurmo.gov/ImageRepository/Document?documentID=13540",
@@ -52,17 +42,27 @@
       "month": "February",
       "schedule_type": "Public Ice Sessions",
       "confidence": "high",
-      "reasoning": "ImageRepository document with ID 13540 is labeled 'Feb Public 2026' in the page content, indicating this is the February 2026 public ice schedule image."
+      "reasoning": "Image labeled 'Feb Public 2026' in the page content indicates this is the February 2026 public ice session schedule displayed as an image document."
     },
     {
-      "schedule_link": "https://www.brentwoodmo.org/DocumentCenter/View/35062/February-2026-Ice-Schedule-UPDATED-",
+      "schedule_link": "https://www.crevecoeurmo.gov/ImageRepository/Document?documentID=8905",
+      "parent_page_link": "https://www.crevecoeurmo.gov/562/Public-Ice-Sessions",
+      "ice_rink_name": "Creve Coeur Ice Arena",
+      "year": 2026,
+      "month": "March",
+      "schedule_type": "Public Ice Sessions",
+      "confidence": "medium",
+      "reasoning": "Second ImageRepository document on the Public Ice Sessions page - likely the next month's schedule (March 2026) following the February schedule pattern."
+    },
+    {
+      "schedule_link": "https://www.brentwoodmo.org/DocumentCenter/View/35071/February-2026-Ice-Schedule-UPDATED-",
       "parent_page_link": "https://www.brentwoodmo.org/2358/Skating-Sessions",
       "ice_rink_name": "Brentwood Ice Rink",
       "year": 2026,
       "month": "February",
       "schedule_type": "Monthly Ice Schedule",
       "confidence": "high",
-      "reasoning": "Direct link to February 2026 Ice Schedule document explicitly labeled 'February 2026 Ice Schedule' with 'UPDATED' notation, indicating current schedule information for the target month."
+      "reasoning": "Direct link to the February 2026 Ice Schedule document, explicitly labeled as 'UPDATED'. This is the primary schedule document for the current month showing public skating sessions and ice times."
     },
     {
       "schedule_link": "https://centene.finnlyconnect.com/registration/activityitem/4762",
